@@ -29,14 +29,8 @@ int main() {
         exit(1);
     }
 
-    while (true) {
-        int client_fd = ::accept(listen_fd, NULL, 0);
-        if (client_fd < 0) {
-            perror("ERROR: accept()");
-            exit(1);
-        }
-        std::cout << "client_fd: " << client_fd << std::endl;
-    }
+    // 下面没有 accept 调用
+    std::cin.get();
     return 0;
 }
 
